@@ -1,13 +1,43 @@
 # eslint-config-prettier
 
 Turns off all rules that are unnecessary or might conflict with [Prettier].
+## VS_CODE Extention Installation
+01. pretter
+2. eslint
 ## Installation
 
-1. Install eslint-config-prettier:
+1. Install eslint-config-prettier: as a devdependeices
 
    ```
+   npm install -D eslint
    npm install --save-dev eslint-config-prettier
    ```
+2. initialize (init) eslint-config-prettier: as a devdependeices
+
+   ```
+   npm init @eslint/config
+   or
+   npm init @eslint/config@latest
+   
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 2. Add eslint-config-prettier to your ESLint configuration – either to [eslintrc] or to [eslint.config.js (flat config)].
 
