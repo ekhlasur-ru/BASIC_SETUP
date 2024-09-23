@@ -40,42 +40,35 @@ Turns off all rules that are unnecessary or might conflict with [Prettier].
 
 
 
+## Custome Setup For Eslint & Prettier
 
+   - eslintrc: Add a Folder Root Directory `".vscode"` then create a file  `.settings.json.*` file.
 
-
-
-
-
-
-
-
-
-
-
-
-11. Add eslint-config-prettier to your ESLint configuration – either to [eslintrc] or to [eslint.config.js (flat config)].
-
-   - eslintrc: Add `"prettier"` to the "extends" array in your `.eslintrc.*` file. Make sure to put it **last,** so it gets the chance to override other configs.
-
-     <!-- prettier-ignore -->
      ```json
-     {
-       "extends": [
-         "some-other-config-you-use",
-         "prettier"
-       ]
-     }
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"prettier.useTabs": true,
+	"prettier.jsxSingleQuote": false,
+	"prettier.tabWidth": 2,
+	"prettier.arrowParens": "avoid",
+	"prettier.singleQuote": true
+}
      ```
-
-   - eslint.config.js (flat config): Import eslint-config-prettier, and put it in the configuration array – **after** other configs that you want to override.
-
-     <!-- prettier-ignore -->
-     ```js
-     import someConfig from "some-other-config-you-use";
-     import eslintConfigPrettier from "eslint-config-prettier";
-
-     export default [
-       someConfig,
-       eslintConfigPrettier,
-     ];
-     ```
+##End
