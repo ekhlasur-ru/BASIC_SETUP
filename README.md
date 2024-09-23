@@ -71,4 +71,28 @@ Turns off all rules that are unnecessary or might conflict with [Prettier].
 	"prettier.singleQuote": true
 }
      ```
+
+
+<!-- prettier-ignore -->
+```json
+{
+  "rules": {
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeBlockComment": true,
+        "afterBlockComment": true,
+        "beforeLineComment": true,
+        "afterLineComment": true,
+        "allowBlockStart": true,
+        "allowBlockEnd": true,
+        "allowObjectStart": true,
+        "allowObjectEnd": true,
+        "allowArrayStart": true,
+        "allowArrayEnd": true
+      }
+    ]
+  }
+}
+```
 ##End
