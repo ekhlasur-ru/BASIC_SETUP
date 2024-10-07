@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+
+
+  
+mkdir server    ||  mkdir Backend
+cd server       ||  cd Backend
+
+npm init -y   ||   npm init
+npm install   ||   npm i
+touch .gitignore .prettierrc .prettierignore README.md .env .env.sample     
+mkdir .vscode
+cd .vscode
+touch settings.json   //.vscode 
+cd ..
+mkdir src
+cd src
+touch index.js app.js constants.js      //constants.js (database_Name)
+mkdir config models controllers routes services utils middlewares       //services(cloudinary.js) //utils(helperFile) //config(database.js)
+
+cd config
+touch database.js
+cd ..
+cd ..
+npm i express mongoose cors bcrypt jsonwebtoken mongodb body-parser colors            //dependencies  (colors--console text colore)
+npm install dotenv --save          //dependencies
+
+npm i --save-dev nodemon prettier   //devDependencies
+npm init @eslint/config@latest            //node select space button 
+
+npm run start
+npm run dev
+
+npx nodemon server   //NOT IMPORTANT
+
+
+
+
+
+
+
+  /////////////////////////// REPLACE THE FILE STRACTURE 
+{
+    "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+ "lint": "eslint \"src/**/*.{js,jsx}\"",
+  },
+
+
+"dev": "node index.js",
+"start": "nodemon index.js"               //always watch the file
+
+
+"scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json}\""
+},
+///////////////////////////ENV
+PORT= 3000
+MONGO_URL= mongodb+srv://youtubeC:youtubeC@youtubecluster.pno16.mongodb.net
+# MONGO_URL= mongodb://localhost:27017/
+CORS_ORIGIN=*
+///////////////////////////
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+///////////////////////////.prettierrc
+{
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+}
+///////////////////////////.gitignore
+/.vscode
+/node_modules
+*.env
+.env
+.env.*
+///////////////////////////.
+/client/node_modules
+/client/.vscode
+
+/server/node_modules
+/server/.vscode
+/server/.env
+///////////////////////////.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
