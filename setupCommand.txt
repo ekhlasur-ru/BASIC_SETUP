@@ -1,0 +1,230 @@
+///////////////////////////FRONTEND__/__CLIENT////////////////////////////////
+///////////////////////////FRONTEND__/__CLIENT////////////////////////////////
+npm creat vite@latest           
+npm creat vite@latest .       ***//same folder
+cd client     || cd Frontend
+npm install   || npm i
+
+touch .gitignore .prettierrc .prettierignore README.md
+mkdir .vscode
+cd .vscode
+touch settings.json   //.vscode 
+cd ..
+cd src
+mkdir components pages
+cd components
+touch Header.jsx Footer.jsx
+cd ..
+cd pages
+touch Home.jsx About.jsx Service.jsx Contact.jsx Login.jsx Signup.jsx Nopage.jsx
+cd ..
+cd ..
+
+npm install react-router-dom axios react-icons --save 
+
+npm init @eslint/config@latest
+npm install -D tailwindcss postcss postcss-cli autoprefixer prettier prettier-plugin-tailwindcss
+npx tailwindcss init -p    //postcss.config.js
+npx tailwindcss init      //tailwind.config.js
+
+npm run dev
+///////////////////////////index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+///////////////////////////tailwind.config.js
+"./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+
+///////////////////////////package.json
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "watch": "postcss ./src/index.css -o ./dist/output.css --watch"
+  },
+
+
+
+"scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
+}, 
+///////////////////////////.prettierrc
+{
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+}
+///////////////////////////eslint.config.js
+{
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
+
+
+///////////////////////////BACKEND__/__SERVER////////////////////////////////
+
+///////////////////////////BACKEND__/__SERVER////////////////////////////////
+mkdir server    ||  mkdir Backend
+cd server       ||  cd Backend
+
+npm init -y   ||   npm init
+npm install   ||   npm i
+touch .gitignore .prettierrc .prettierignore README.md .env .env.sample     //constants.js (database_Name)
+
+mkdir src
+cd src
+touch index.js app.js constants.js      //constants.js (database_Name)
+mkdir config models controllers routes services utils middlewares       //services(cloudinary.js) //utils(helperFile) //config(database.js)
+
+cd config
+touch database.js
+cd ..
+cd ..
+npm i express mongoose cors bcrypt jsonwebtoken mongodb body-parser colors            //dependencies  (colors--console text colore)
+npm install dotenv --save          //dependencies
+
+npm i --save-dev nodemon prettier   //devDependencies
+npm init @eslint/config@latest            //node select space button 
+
+npm run start
+npm run dev
+
+npx nodemon server   //NOT IMPORTANT
+/////////////////////////// REPLACE THE FILE STRACTURE 
+{
+    "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+ "lint": "eslint \"src/**/*.{js,jsx}\"",
+  },
+
+
+"dev": "node index.js",
+"start": "nodemon index.js"               //always watch the file
+
+
+"scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
+},
+///////////////////////////ENV
+PORT= 3000
+MONGO_URL= mongodb+srv://youtubeC:youtubeC@youtubecluster.pno16.mongodb.net
+# MONGO_URL= mongodb://localhost:27017/
+CORS_ORIGIN=*
+///////////////////////////
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+///////////////////////////.prettierrc
+{
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+}
+///////////////////////////.gitignore
+/.vscode
+/node_modules
+*.env
+.env
+.env.*
+
+
+///////////////////////////README.md///////////////////////////
+///////////////////////////README.md///////////////////////////
+## 🚀 About Me
+Hi there I'm EKHLASUR RAHMAN a full (MERN) stack developer with React.js-(JavaScript), Express.js, Nodejs, MongoDB
+
+## 🛠 Skills
+
+# Frontend / Client
+
+`HTML`
+`CSS`
+`Tailwindcss`
+`postcss`
+`postcss-cli`
+`autoprefixer (cross browser support)`
+`JavaScript`
+`React with vite`
+`react-router-dom`
+`react-icons`
+`axios`
+`eslint (error handle)`
+`pretter (customize code formator)`
+
+# Backend / Server / Api
+
+`node.js`
+`express.js`
+`cors (custom api access)`
+`jsonwebtoken (JWT for authentication)`
+`dotenv (api key, db url, CLOUDINARY/)`
+`nodemon (auto reload server)`
+`bcrypt (hash password)`
+`eslint (error handle)`
+`pretter (customize code formator)`
+`colors (customize console color)`
+
+
+# Database
+`MongoDB`
+`MongoDBCompass`
+`mongoose`
+
+
+## 🔗 Clone  my-project with git terminal
+
+```bash
+  git clone https://github.com/ekhlasur-ru/my-project.git
+```
+
+## 🔗 Social Media Links
+[![Facebook](https://img.shields.io/badge/facebook-1DA1F2?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/miekhlas)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/miekhlas)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/miekhlas)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ekhlasur-ru/)
+
+## Feedback
+
+If you have any feedback, please reach out to me at ekhlsur.ru@outlook.com 
+
+## Authors
+
+- [@webdevankit07](https://github.com/ekhlasur-ru)
