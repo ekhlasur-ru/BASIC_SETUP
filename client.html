@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>client</title>
+</head>
+<body>
+  npm creat vite@latest           
+npm creat vite@latest .       ***//same folder
+cd client     || cd Frontend
+npm install   || npm i
 
+touch .gitignore .prettierrc .prettierignore README.md
+mkdir .vscode
+cd .vscode
+touch settings.json   //.vscode 
+cd ..
+cd src
+mkdir components pages
+cd components
+touch Header.jsx Footer.jsx
+cd ..
+cd pages
+touch Home.jsx About.jsx Service.jsx Contact.jsx Login.jsx Signup.jsx Nopage.jsx
+cd ..
+cd ..
+
+npm install react-router-dom axios react-icons --save 
+
+npm init @eslint/config@latest
+npm install -D tailwindcss postcss postcss-cli autoprefixer prettier prettier-plugin-tailwindcss
+npx tailwindcss init -p    //postcss.config.js
+npx tailwindcss init      //tailwind.config.js
+
+npm run dev
+
+  
+</body>
+</html>
