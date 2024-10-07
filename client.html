@@ -35,6 +35,104 @@ npx tailwindcss init      //tailwind.config.js
 
 npm run dev
 
+///////////////////////////index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+///////////////////////////tailwind.config.js
+"./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+
+///////////////////////////package.json
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "watch": "postcss ./src/index.css -o ./dist/output.css --watch"
+  },
+
+
+
+"scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
+}, 
+///////////////////////////.prettierrc
+{
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+}
+///////////////////////////eslint.config.js
+{
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
+
+
+
+///////////////////////////settings.json
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
   
 </body>
 </html>
